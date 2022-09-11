@@ -1,0 +1,35 @@
+.container {
+  position: relative;
+  width: 100%;
+  .section {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    &:not(:last-child) {
+      margin-bottom: 10px;
+    }
+    .zip {
+      display: inline-flex;
+      line-height: 100%;
+      min-width: 24px;
+    }
+    .menu {
+      flex-shrink: 1;
+      flex-grow: 1;
+    }
+    &> *:not(:last-child) {
+      margin-right: 10px;
+    }
+  }
+  input {
+    height: 40px;
+    width: 100%;
+    border: 1px solid #ced4da;
+    background-color: white;
+    font-size: 1rem;
+    padding-left: 10px;
+    padding-right: 10px;
+    outline: none;
+  }
+}
