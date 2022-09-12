@@ -13,6 +13,9 @@
       display: inline-flex;
       line-height: 100%;
       min-width: 24px;
+      &.hidden {
+        display: none;
+      }
     }
     .menu {
       flex-shrink: 1;
