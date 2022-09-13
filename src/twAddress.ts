@@ -16,6 +16,11 @@ export default class TWAddress extends HTMLElement {
   #townRef: Dropdown | null
   #zipRef: HTMLElement | null
 
+  #zip: string
+  #city: { name: string, value: string } | null
+  #town: { name: string, value: string } | null
+  #address: string
+
   constructor () {
     super()
     this.attachShadow({ mode: 'open' })
@@ -26,6 +31,11 @@ export default class TWAddress extends HTMLElement {
     this.#cityRef = null
     this.#townRef = null
     this.#zipRef = null
+
+    this.#zip = ''
+    this.#city = null
+    this.#town = null
+    this.#address = ''
   }
 
   connectedCallback () {
@@ -55,7 +65,7 @@ export default class TWAddress extends HTMLElement {
       this.#townRef.addEventListener('change', this.townChosen)
     }
   }
-  
+
   disconnectedCallback () {
     if (this.#cityRef !== null) {
       this.#cityRef.removeEventListener('change', this.cityChosen)
@@ -70,6 +80,9 @@ export default class TWAddress extends HTMLElement {
     if (city.value in towns) {
       if (this.#townRef !== null) {
         this.#townRef.options = towns[city.value as keyof typeof towns]
+        this.#city = city
+        this.#town = null
+        this.#zip = ''
         if (this.#zipRef !== null) {
           this.#zipRef.classList.add('hidden')
         }
@@ -81,6 +94,8 @@ export default class TWAddress extends HTMLElement {
     const town = (option as CustomEvent).detail
     if (town.value in zips) {
       const zip = zips[town.value as keyof typeof zips]
+      this.#town = town
+      this.#zip = zip
       if (this.#zipRef !== null) {
         this.#zipRef.textContent = zip
         this.#zipRef.classList.remove('hidden')
