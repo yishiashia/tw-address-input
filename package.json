@@ -1,6 +1,6 @@
 {
   "name": "tw-address-input",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Taiwan address input component",
   "main": "./dist/tw-address.js",
   "types": "./types/index.d.ts",

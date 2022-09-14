@@ -13,6 +13,12 @@ A simple Taiwan address input WebComponent.
 
 English | [中文](https://github.com/yishiashia/tw-address-input/blob/master/README.zh-TW.md)
 
+<div style="border: 1px solid #CCC; padding: 20px;">
+
+![demo image](https://yishiashia.github.io/img/demo/tw-address.gif)
+
+</div>
+
 ## Install
 
     $ npm install tw-address-input

@@ -13,6 +13,12 @@
 
 [English](https://github.com/yishiashia/tw-address-input#readme) | 中文
 
+<div style="border: 1px solid #CCC; padding: 20px;">
+
+![demo image](https://yishiashia.github.io/img/demo/tw-address.gif)
+
+</div>
+
 ## 安裝
 
     $ npm install tw-address-input
