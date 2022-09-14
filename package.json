@@ -1,6 +1,6 @@
 {
   "name": "tw-address-input",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Taiwan address input component",
   "main": "./dist/tw-address.js",
   "types": "./types/index.d.ts",
@@ -15,10 +15,12 @@
     "url": "git+https://github.com/yishiashia/tw-address-input.git"
   },
   "keywords": [
-    "dropdown",
-    "menu",
-    "select",
-    "option",
+    "Taiwan",
+    "addresss",
+    "input",
+    "zip",
+    "city",
+    "town",
     "webcomponent"
   ],
   "author": "yishiashia <yishiashia@gmail.com>",
