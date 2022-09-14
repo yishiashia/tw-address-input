@@ -9,15 +9,15 @@
 
 [![NPM](https://nodei.co/npm/tw-address-input.png?mini=true)](https://www.npmjs.com/package/tw-address-input)
 
-A simple Taiwan address input WebComponent.
+使用政府開放資料平臺縣市鄉鎮資料實作的簡易台灣地址輸入Web元件。
 
-English | [中文](https://github.com/yishiashia/tw-address-input/blob/master/README.zh-TW.md)
+[English](https://github.com/yishiashia/tw-address-input#readme) | 中文
 
-## Install
+## 安裝
 
     $ npm install tw-address-input
 
-## Syntax
+## 使用語法
 
 ```html
 <script src="tw-address.js"></script>
@@ -28,28 +28,26 @@ English | [中文](https://github.com/yishiashia/tw-address-input/blob/master/RE
 </form>
 ```
 
-## Demo page
+## Demo 頁面
 The demo page: https://yishiashia.github.io/address.html
 
-## Usage
+## 參數
 
  - [name](#name)
  - [value](#value)
 
-### Attributes
+### name
+`String` 型態. Form 表單中的 POST 參數名稱。
 
-#### name
-`String` typs. The name of input, it would be the POST parameter name.
-
-#### value ( getter )
-You can get the value of address input component by javascript, for example:
+### value ( getter )
+您可以透過 javascript 取得 Web 元件的地址資料，範例如下:
 
 ```js
 const addrElement = document.querySelector('tw-address')
 
 console.log(addrElement.value)
 /*
-  It will output:
+  將會輸出:
   {
     zip: '220',
     city: '新北市',
@@ -61,10 +59,10 @@ console.log(addrElement.value)
 ```
 
 
-### Event
+### 事件
 
-#### change event
-When user fill an address, a `change` event will be dispatch, and you can bind an event listener to handle it:
+#### change 事件
+當使用者輸入地址時，會派送 `change` 事件，您可以透過綁定事件 listener 來處理它:
 
 ```js
 let addrElement = document.querySelector('tw-address')
@@ -72,7 +70,7 @@ let addrElement = document.querySelector('tw-address')
 addrElement.addEventListener('change', function(option) {
   console.log(option.detail)
   /*
-    output example:
+    輸出範例:
       {
         zip: "220",
         city: "新北市",
