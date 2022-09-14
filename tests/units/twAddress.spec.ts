@@ -41,10 +41,10 @@ describe('twAddress.ts', () => {
         const addrInput = customElement.shadowRoot.querySelector('.address-input') as HTMLInputElement
         if (cityMenu !== null) {
           cityMenu.setSelectedOption(5)
-          expect(customElement.value.city?.value).toBe('F')
+          expect(customElement.value.city).toBe('新北市')
           if (townMenu !== null) {
             townMenu.setSelectedOption(5)
-            expect(customElement.value.town?.value).toBe('F07')
+            expect(customElement.value.town).toBe('新店區')
             if (addrInput !== null) {
               const testStr = "blablabla"
               addrInput.value = testStr

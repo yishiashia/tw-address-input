@@ -158,13 +158,23 @@ export default class TWAddress extends HTMLElement {
         this.#town === null ? '' : this.#town.name,
         this.#address
       ].join(' ')
+      const evt = new CustomEvent('change', {
+        detail: {
+          zip: this.#zip,
+          city: this.#city === null ? '' : this.#city.name,
+          town: this.#town === null ? '' : this.#town.name,
+          address: this.#address
+        }
+      })
+      this.dispatchEvent(evt)
     }
   }
 
   get value () {
     return {
-      city: this.#city,
-      town: this.#town,
+      zip: this.#zip,
+      city: this.#city === null ? '' : this.#city.name,
+      town: this.#town === null ? '' : this.#town.name,
       address: this.#address
     }
   }
