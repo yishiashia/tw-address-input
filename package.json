@@ -1,6 +1,6 @@
 {
   "name": "tw-address-input",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Taiwan address input component",
   "main": "./dist/tw-address.js",
   "types": "./types/index.d.ts",
@@ -12,7 +12,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/yishiashia/tw-address.git"
+    "url": "git+https://github.com/yishiashia/tw-address-input.git"
   },
   "keywords": [
     "dropdown",
@@ -24,9 +24,9 @@
   "author": "yishiashia <yishiashia@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/yishiashia/tw-address/issues"
+    "url": "https://github.com/yishiashia/tw-address-input/issues"
   },
-  "homepage": "https://github.com/yishiashia/tw-address#readme",
+  "homepage": "https://github.com/yishiashia/tw-address-input#readme",
   "files": [
     "dist/*",
     "types/*"
