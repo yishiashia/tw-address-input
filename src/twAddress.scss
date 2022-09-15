@@ -8,6 +8,8 @@
     align-items: center;
     &:not(:last-child) {
       margin-bottom: 10px;
+      justify-content: space-between;
+      gap: 5px 10px;
     }
     .zip {
       display: inline-flex;
@@ -20,9 +22,6 @@
     .menu {
       flex-shrink: 1;
       flex-grow: 1;
-    }
-    &> *:not(:last-child) {
-      margin-right: 10px;
     }
   }
   input {
