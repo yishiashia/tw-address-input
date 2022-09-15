@@ -29,7 +29,6 @@ export default class TWAddress extends HTMLElement {
   #zip: string
   #city: { name: string, value: string } | null
   #town: { name: string, value: string } | null
-  #address: string
 
   #props: {
     name: string;
@@ -53,7 +52,6 @@ export default class TWAddress extends HTMLElement {
     this.#zip = ''
     this.#city = null
     this.#town = null
-    this.#address = ''
     this.#props = {
       name: ''
     }
@@ -145,25 +143,24 @@ export default class TWAddress extends HTMLElement {
 
   inputChange () {
     if (this.#inputRef !== null) {
-      this.#address = this.#inputRef.value
       this.valueChange()
     }
   }
 
   valueChange () {
-    if (this.#realInput !== null) {
+    if (this.#realInput !== null && this.#inputRef !== null) {
       this.#realInput.value = [
         this.#zip,
         this.#city === null ? '' : this.#city.name,
         this.#town === null ? '' : this.#town.name,
-        this.#address
+        this.#inputRef.value
       ].join(' ')
       const evt = new CustomEvent('change', {
         detail: {
           zip: this.#zip,
           city: this.#city === null ? '' : this.#city.name,
           town: this.#town === null ? '' : this.#town.name,
-          address: this.#address
+          address: this.#inputRef.value
         }
       })
       this.dispatchEvent(evt)
@@ -175,7 +172,7 @@ export default class TWAddress extends HTMLElement {
       zip: this.#zip,
       city: this.#city === null ? '' : this.#city.name,
       town: this.#town === null ? '' : this.#town.name,
-      address: this.#address
+      address: this.#inputRef === null ? '' : this.#inputRef.value
     }
   }
 
