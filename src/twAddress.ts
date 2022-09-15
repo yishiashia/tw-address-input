@@ -95,7 +95,8 @@ export default class TWAddress extends HTMLElement {
       this.#townRef.addEventListener('change', this.townChosen)
     }
     if (this.#inputRef !== null) {
-      this.#inputRef.addEventListener('keyup', this.inputChange)
+      this.#inputRef.addEventListener('input', this.inputChange)
+      this.#inputRef.addEventListener('change', this.inputChange)
     }
   }
 
@@ -107,7 +108,8 @@ export default class TWAddress extends HTMLElement {
       this.#townRef.removeEventListener('change', this.townChosen)
     }
     if (this.#inputRef !== null) {
-      this.#inputRef.removeEventListener('keyup', this.inputChange)
+      this.#inputRef.removeEventListener('input', this.inputChange)
+      this.#inputRef.removeEventListener('change', this.inputChange)
     }
   }
 
