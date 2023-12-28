@@ -35,7 +35,7 @@ English | [中文](https://github.com/yishiashia/tw-address-input/blob/master/RE
 ```
 
 ## Demo page
-The demo page: https://yishiashia.github.io/address.html
+The demo page: https://yishiashia.github.io/tw-address-input/
 
 ## Usage
 
